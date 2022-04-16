@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--дробавики-->
+        <item
+            android:id="@+id/arnieItem"
+            android:icon="@drawable/arnie"
+            android:title="@string/arnie" />
+        <item
+            android:id="@+id/cyclopsItem"
+            android:icon="@drawable/cyclops"
+            android:title="@string/cyclops" />
+        <item
+            android:id="@+id/sparkleItem"
+            android:icon="@drawable/sparkle"
+            android:title="@string/sparkle" />
+        <item
+            android:id="@+id/hurricaneItem"
+            android:icon="@drawable/hurricane"
+            android:title="@string/hurricane" />
+        <!--разведчики-->
+        <item
+            android:id="@+id/ghostItem"
+            android:icon="@drawable/ghost"
+            android:title="@string/ghost" />
+        <item
+            android:id="@+id/freddieItem"
+            android:icon="@drawable/freddie"
+            android:title="@string/freddie" />
+        <item
+            android:id="@+id/angelItem"
+            android:icon="@drawable/angel"
+            android:title="@string/angel" />
+        <item
+            android:id="@+id/ravenItem"
+            android:icon="@drawable/raven"
+            android:title="@string/raven" />
+        <!--снайперы-->
+        <item
+            android:id="@+id/blotItem"
+            android:icon="@drawable/blot"
+            android:title="@string/blot" />
+        <item
+            android:id="@+id/fireflyItem"
+            android:icon="@drawable/firefly"
+            android:title="@string/firefly" />
+        <item
+            android:id="@+id/slayerItem"
+            android:icon="@drawable/slayer"
+            android:title="@string/slayer" />
+        <item
+            android:id="@+id/mirageItem"
+            android:icon="@drawable/mirage"
+            android:title="@string/mirage" />
+        <!--танки-->
+        <item
+            android:id="@+id/smogItem"
+            android:icon="@drawable/smog"
+            android:title="@string/smog" />
+        <item
+            android:id="@+id/dragoonItem"
+            android:icon="@drawable/dragoon"
+            android:title="@string/dragoon" />
+        <item
+            android:id="@+id/bastionItem"
+            android:icon="@drawable/bastion"
+            android:title="@string/bastion" />
+        <item
+            android:id="@+id/berthaItem"
+            android:icon="@drawable/bertha"
+            android:title="@string/bertha" />
+        <item
+            android:id="@+id/leviathanItem"
+            android:icon="@drawable/leviathan"
+            android:title="@string/leviathan" />
+        <!--штурмовики-->
+        <item
+            android:id="@+id/stalkerItem"
+            android:icon="@drawable/stalker"
+            android:title="@string/stalker" />
+        <item
+            android:id="@+id/docItem"
+            android:icon="@drawable/doc"
+            android:title="@string/doc" />
+        <item
+            android:id="@+id/leviItem"
+            android:icon="@drawable/levi"
+            android:title="@string/levi" />
+        <item
+            android:id="@+id/satoshiItem"
+            android:icon="@drawable/satoshi"
+            android:title="@string/satoshi" />
+    </group>
+
+</menu>

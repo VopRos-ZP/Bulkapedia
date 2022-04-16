@@ -1,0 +1,9 @@
+*.iml
+.idea/
+build/
+.gradle/
+/app/build/
+/app/release/
+/app/src/androidTest/
+/app/src/test/
+
