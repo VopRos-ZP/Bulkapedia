@@ -32,9 +32,7 @@ class SetFragment (private val set: Set) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val gears = getGears()
         val ivs = getIVs()
-        ivs.forEachIndexed { i, iv ->
-            iv.setImageResource(gears[i].icon)
-        }
+        ivs.forEachIndexed { i, iv -> iv.setImageResource(gears[i].icon) }
     }
 
     private fun getGears(): List<Gear> = set.gears.map { it.value }

@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bind.root)
         // Инициализация всех элеменотов
-        initAllElements()
+//        initAllElements()
         // Инициализируем Preferences
-        initPreferences()
+//        initPreferences()
         // Обновляем Views
-        updateViews()
+//        updateViews()
     }
 
     private fun initAllElements() {
