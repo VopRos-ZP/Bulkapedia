@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.bulkapedia.MainActivity
 import com.bulkapedia.R
 import com.bulkapedia.databinding.HeroFragmentBinding
 import com.bulkapedia.gears.GearSet
@@ -16,11 +16,11 @@ import com.bulkapedia.models.MainViewModel
 import com.bulkapedia.sets.Set
 import com.google.android.material.tabs.TabLayoutMediator
 
-class HeroFragment (private val main: MainActivity) : Fragment() {
+class HeroFragment (private val drawer: DrawerLayout) : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(act: MainActivity): HeroFragment = HeroFragment(act)
+        fun newInstance(drawer: DrawerLayout): HeroFragment = HeroFragment(drawer)
     }
 
     private val model: MainViewModel by activityViewModels()
@@ -38,12 +38,12 @@ class HeroFragment (private val main: MainActivity) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Получаем ViewModel и инициализируем содержимое фрагмента
-        model.hero.observe(viewLifecycleOwner) { it ->
+        model.hero.observe(viewLifecycleOwner) {
             // Инициализируем ActionBar
             bind.barInclude.actionBar.title = getString(it.heroName)
             bind.barInclude.actionBar.setNavigationIcon(R.drawable.menu)
             bind.barInclude.actionBar.setNavigationOnClickListener {
-                MainActivity.openDrawer(main.bind.drawerLayout)
+                GearsFragment.openDrawer(drawer)
             }
             // Инициализируем иконку героя
             bind.heroIcon.setImageResource(it.heroIcon)

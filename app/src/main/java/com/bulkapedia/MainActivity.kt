@@ -4,35 +4,21 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.view.GravityCompat
 import androidx.core.view.forEach
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_LOCKED_OPEN
-import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_UNLOCKED
+import androidx.core.view.get
 import com.bulkapedia.databinding.ActivityMainBinding
-import com.bulkapedia.fragments.HeroFragment
-import com.bulkapedia.fragments.SettingsFragment
-import com.bulkapedia.heroes.HeroList
-import com.bulkapedia.models.HeroModel
+import com.bulkapedia.fragments.GearsFragment
+import com.bulkapedia.fragments.MapsFragment
 import com.bulkapedia.models.MainViewModel
 import com.bulkapedia.preference.UserPreferences
+import com.bulkapedia.utils.BottomMenuUtils
 import com.bulkapedia.utils.Language
-import com.google.android.material.navigation.NavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    companion object {
-        const val GRAV_START = GravityCompat.START
-        fun closeDrawer(drawer: DrawerLayout) {
-            drawer.closeDrawer(GRAV_START)
-        }
-        fun openDrawer(drawer: DrawerLayout) {
-            drawer.openDrawer(GRAV_START)
-        }
-    }
+class MainActivity : AppCompatActivity(),
+    BottomNavigationView.OnNavigationItemSelectedListener {
 
     private val model: MainViewModel by viewModels()
 
@@ -45,49 +31,51 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bind.root)
         // Инициализация всех элеменотов
-//        initAllElements()
+        initAllElements()
         // Инициализируем Preferences
-//        initPreferences()
+        initPreferences()
         // Обновляем Views
-//        updateViews()
+        updateViews()
     }
 
     private fun initAllElements() {
-        // Инициализируем Drawer
-        openDrawer(bind.drawerLayout)
-        bind.drawerLayout.setDrawerLockMode(LOCK_MODE_LOCKED_OPEN)
-        // Инициализируем нажатие на `настройки`
-        bind.navigationHeroes.itemIconTintList = null
-        bind.navigationHeroes.getHeaderView(0)
-            .findViewById<View>(R.id.settingsBtn)
-            .setOnClickListener {
-                // Закрываем шторку
-                closeDrawer(bind.drawerLayout)
-                bind.drawerLayout.setDrawerLockMode(LOCK_MODE_UNLOCKED)
-                // Меняем holder на settings_fragment
-                supportFragmentManager.beginTransaction().replace(
-                    bind.holderInclude.holder.id,
-                    SettingsFragment.newInstance(this)
-                ).commit()
-            }
-        // Инициализируем нажатие на героя
-        bind.navigationHeroes.setNavigationItemSelectedListener(this)
+        // Инициализируем BottomNavigationView
+        val selectedId = R.id.gearsItem
+        bind.bottomNav.selectedItemId = selectedId
+        bind.bottomNav.setOnItemSelectedListener(this)
+        supportFragmentManager.beginTransaction().replace(
+            bind.frame.id, GearsFragment(this)
+        ).commit()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Закрываем шторку
-        closeDrawer(bind.drawerLayout)
-        bind.drawerLayout.setDrawerLockMode(LOCK_MODE_UNLOCKED)
-        // Получаем героя
-        val hero = HeroList.getHeroById(item.itemId)
-        val heroName = HeroList.getHeroNameById(hero.id)
-        // Инициализируем ViewModel
-        model.hero.value = HeroModel(hero, hero.icon, heroName, hero.sets)
-        // Меняем holder на hero_fragment
-        supportFragmentManager.beginTransaction().replace(
-            bind.holderInclude.holder.id,
-            HeroFragment.newInstance(this)).commit()
+        if (item.itemId == R.id.mapsItem) {
+            Toast.makeText(this, "Soon", Toast.LENGTH_SHORT).show()
+            return false
+        }
+        // Смена фрагмента
+        val fragment = when (item.itemId) {
+            R.id.gearsItem -> GearsFragment(this)
+            else -> GearsFragment(this) // Replace to MapsFragment
+        }
+        supportFragmentManager.beginTransaction()
+            .replace(bind.root[0].id, fragment).commit()
         return true
+    }
+
+    fun updateViews() {
+        bind.bottomNav.menu.forEach {
+            it.title = getString(BottomMenuUtils.mapMenuItems[it.itemId]!!)
+        }
+        // Update GearsFragment or MapsFragment
+        val fragment = supportFragmentManager.findFragmentById(bind.root[0].id)
+        if (fragment != null) {
+            try {
+                (fragment as GearsFragment).updateView()
+            } catch (e: Exception) {
+                (fragment as MapsFragment).updateView()
+            }
+        }
     }
 
     private fun initPreferences() {
@@ -102,26 +90,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     fun getPreferences() : SharedPreferences {
         return getSharedPreferences(UserPreferences.PREFERENCES, MODE_PRIVATE)
-    }
-
-    fun updateViews() {
-        // Обновляем заголовок в NavigationView
-        bind.navigationHeroes.getHeaderView(0)
-            .findViewById<TextView>(R.id.header_nav_view_tv)
-            .text = getString(R.string.select_hero)
-        // Обновляем имена героев в NavigationView
-        bind.navigationHeroes.menu.forEach {
-            it.title = getString(HeroList.getHeroNameById(it.itemId))
-        }
-    }
-
-    override fun onBackPressed() {
-        if (bind.drawerLayout.isDrawerOpen(GRAV_START)) {
-            if (bind.drawerLayout.getDrawerLockMode(GRAV_START) != LOCK_MODE_LOCKED_OPEN)
-                bind.drawerLayout.closeDrawer(GRAV_START)
-        } else {
-            super.onBackPressed()
-        }
     }
 
 }

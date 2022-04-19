@@ -7,6 +7,8 @@
     <string name="battle_royale_mode">BR</string>
     <string name="squad_mode">SQUAD</string>
     <string name="all_modes">Universal</string>
+    <string name="menu_gears">Gears</string>
+    <string name="menu_maps">Maps</string>
     <!--   найстройки -->
     <string name="settings_text">Text</string>
     <string name="settings">Settings</string>

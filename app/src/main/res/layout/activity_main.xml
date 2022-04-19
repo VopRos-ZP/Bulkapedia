@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:id="@+id/drawer_layout"
-    tools:openDrawer="start"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include android:id="@+id/holder_include"
-        layout="@layout/main_fragment"
+    <FrameLayout android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_heroes"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:layout_gravity="start"
-        app:menu="@menu/heroes_menu"
-        app:headerLayout="@layout/header_navigation_heroes"
-        />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_menu" />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

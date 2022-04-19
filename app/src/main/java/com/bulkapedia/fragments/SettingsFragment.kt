@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.core.content.edit
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.bulkapedia.MainActivity
 import com.bulkapedia.R
@@ -13,11 +14,15 @@ import com.bulkapedia.databinding.SettingsFragmentBinding
 import com.bulkapedia.preference.UserPreferences
 import com.bulkapedia.utils.Language
 
-class SettingsFragment (private val main: MainActivity) : Fragment() {
+class SettingsFragment (
+    private val main: MainActivity,
+    private val drawer: DrawerLayout
+    ) : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(main: MainActivity): SettingsFragment = SettingsFragment(main)
+        fun newInstance(main: MainActivity, drawer: DrawerLayout): SettingsFragment =
+            SettingsFragment(main, drawer)
     }
 
     private lateinit var bind: SettingsFragmentBinding
@@ -37,7 +42,7 @@ class SettingsFragment (private val main: MainActivity) : Fragment() {
         bind.actionBarInclude.actionBar.title = getString(R.string.settings)
         bind.actionBarInclude.actionBar.setNavigationIcon(R.drawable.menu)
         bind.actionBarInclude.actionBar.setNavigationOnClickListener {
-            MainActivity.openDrawer(main.bind.drawerLayout)
+            GearsFragment.openDrawer(drawer)
         }
         // Инициализируем default значение
         getRadioButtonByLang().isChecked = true

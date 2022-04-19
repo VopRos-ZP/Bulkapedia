@@ -7,6 +7,8 @@
     <string name="battle_royale_mode">КБ</string>
     <string name="squad_mode">Стенка</string>
     <string name="all_modes">Универсальная</string>
+    <string name="menu_gears">Снаряжение</string>
+    <string name="menu_maps">Карты</string>
     <!--   найстройки -->
     <string name="settings_text">Текст</string>
     <string name="settings">Настройки</string>
