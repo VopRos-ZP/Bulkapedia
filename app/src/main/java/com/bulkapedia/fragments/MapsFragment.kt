@@ -5,23 +5,25 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.view.GravityCompat
+import androidx.core.view.forEach
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.bulkapedia.MainActivity
 import com.bulkapedia.R
 import com.bulkapedia.databinding.DrawerLayoutBinding
-import com.bulkapedia.heroes.HeroList
-import com.bulkapedia.models.HeroModel
+import com.bulkapedia.maps.MapList
 import com.bulkapedia.models.MainViewModel
+import com.bulkapedia.models.MapModel
 import com.google.android.material.navigation.NavigationView
 
 class MapsFragment (private val main: MainActivity)
     : Fragment(), NavigationView.OnNavigationItemSelectedListener {
 
     companion object {
-        const val GRAV_START = GravityCompat.START
+        private const val GRAV_START = GravityCompat.START
         fun closeDrawer(drawer: DrawerLayout) {
             drawer.closeDrawer(GRAV_START)
         }
@@ -55,40 +57,58 @@ class MapsFragment (private val main: MainActivity)
         bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN)
         // Инициализируем нажатие на `настройки`
         bind.navView.itemIconTintList = null
-        bind.navView.getHeaderView(0)
-            .findViewById<View>(R.id.settingsBtn)
+        val header = bind.navView.getHeaderView(0)
+        header.findViewById<TextView>(R.id.header_nav_view_tv).text =
+            getString(R.string.select_map)
+        header.findViewById<View>(R.id.settingsBtn)
             .setOnClickListener {
                 // Закрываем шторку
                 closeDrawer(bind.drawer)
                 bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                 // Меняем holder на settings_fragment
-//                main.supportFragmentManager.beginTransaction().replace(
-//                    bind.holder.holder.id,
-//                    SettingsFragment.newInstance(main)
-//                ).commit()
+                main.supportFragmentManager.beginTransaction().replace(
+                    bind.holder.holder.id,
+                    SettingsFragment.newInstance(main, bind.drawer)
+                ).commit()
             }
+        bind.navView.inflateMenu(R.menu.maps_menu)
         // Инициализируем нажатие на карту
         bind.navView.setNavigationItemSelectedListener(this)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Закрываем шторку
-//        closeDrawer(bind.drawer)
-//        bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+        closeDrawer(bind.drawer)
+        bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
         // Получаем карту
-//        val hero = HeroList.getHeroById(item.itemId)
-//        val heroName = HeroList.getHeroNameById(hero.id)
+        val map = MapList.getMap(item.itemId)
         // Инициализируем ViewModel
-//        model.hero.value = HeroModel(hero, hero.icon, heroName, hero.sets)
-        // Меняем holder на hero_fragment
-//        main.supportFragmentManager.beginTransaction().replace(
-//            bind.holder.holder.id,
-//            HeroFragment.newInstance(main)).commit()
+        model.map.value = MapModel(map.mapImage, map.mapImageSpawns, map.mapName)
+        // Меняем holder на map_fragment
+        main.supportFragmentManager.beginTransaction().replace(
+            bind.holder.holder.id,
+            MapFragment.newInstance(bind.drawer)
+        ).commit()
         return true
     }
 
     fun updateView() {
         // Переинициалируем элементы
+        bind.navView.getHeaderView(0)
+            .findViewById<TextView>(R.id.header_nav_view_tv)
+            .text = getString(R.string.select_map)
+        bind.navView.menu.forEach { item ->
+            if (MapList.groups.containsKey(item.itemId)) {
+                val groupName = MapList.getGroupName(item.itemId)
+                item.title = getString(groupName)
+                if (item.hasSubMenu()) {
+                    item.subMenu.forEach { subItem ->
+                        val name: Int = MapList.getMap(subItem.itemId).mapName
+                        subItem.title = getString(name)
+                    }
+                }
+            }
+        }
     }
 
 }

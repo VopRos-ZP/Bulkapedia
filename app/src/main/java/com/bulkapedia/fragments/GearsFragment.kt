@@ -55,11 +55,14 @@ class GearsFragment (private val main: MainActivity)
         // Инициализируем Drawer
         openDrawer(bind.drawer)
         bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN)
+        // Инициализируем навигационное меню
+        bind.navView.inflateMenu(R.menu.heroes_menu)
         // Инициализируем нажатие на `настройки`
         bind.navView.itemIconTintList = null
-        bind.navView.getHeaderView(0)
-            .findViewById<View>(R.id.settingsBtn)
-            .setOnClickListener {
+        val headerView = bind.navView.getHeaderView(0)
+        headerView.findViewById<TextView>(R.id.header_nav_view_tv).text =
+            getString(R.string.select_hero)
+        headerView.findViewById<View>(R.id.settingsBtn).setOnClickListener {
                 // Закрываем шторку
                 closeDrawer(bind.drawer)
                 bind.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)

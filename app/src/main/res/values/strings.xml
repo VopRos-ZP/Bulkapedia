@@ -2,13 +2,17 @@
     <string name="app_name" translatable="false">Bulkapedia</string>
     <string name="language">en</string>
     <string name="select_hero">Select hero</string>
+    <string name="select_map">Select map</string>
     <string name="ignore_personal_gears">Ignore personal gears</string>
     <string name="hide_effects">Hide effects</string>
-    <string name="battle_royale_mode">BR</string>
-    <string name="squad_mode">SQUAD</string>
+    <string name="battle_royale_mode">Battle Royale</string>
+    <string name="squad_mode">Squad</string>
+    <string name="kings_of_hill_mode">Kings Of Hill</string>
     <string name="all_modes">Universal</string>
     <string name="menu_gears">Gears</string>
     <string name="menu_maps">Maps</string>
+    <string name="show_spawns">Show spawns</string>
+    <string name="hide_spawns">Hide spawns</string>
     <!--   найстройки -->
     <string name="settings_text">Text</string>
     <string name="settings">Settings</string>
@@ -98,4 +102,16 @@
     <string name="doc">Doc</string>
     <string name="levi">Levi</string>
     <string name="satoshi">Satoshi</string>
+    <!--   названия карт -->
+    <string name="hotel">Hotel</string>
+    <string name="bank">Bank</string>
+    <string name="city">City</string>
+    <string name="city_garden">City Garden</string>
+    <string name="village">Village</string>
+    <string name="police_station">Police Station</string>
+    <string name="depot">Depot</string>
+    <string name="casino">Casino</string>
+    <string name="road_motel">Road Motel</string>
+    <string name="villa">Villa</string>
+    <string name="sewerage">Sewerage</string>
 </resources>

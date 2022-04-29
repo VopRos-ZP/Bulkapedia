@@ -49,14 +49,10 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.mapsItem) {
-            Toast.makeText(this, "Soon", Toast.LENGTH_SHORT).show()
-            return false
-        }
         // Смена фрагмента
         val fragment = when (item.itemId) {
             R.id.gearsItem -> GearsFragment(this)
-            else -> GearsFragment(this) // Replace to MapsFragment
+            else -> MapsFragment(this)
         }
         supportFragmentManager.beginTransaction()
             .replace(bind.root[0].id, fragment).commit()
