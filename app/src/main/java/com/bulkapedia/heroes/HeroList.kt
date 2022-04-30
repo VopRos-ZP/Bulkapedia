@@ -7,7 +7,7 @@ class HeroList {
     companion object {
         val ARNIE = Hero(R.id.arnieItem, R.drawable.arnie_menu, R.drawable.arnie_icon, SetList.ARNIE_SETS)
         private val CYCLOPS = Hero(R.id.cyclopsItem, R.drawable.cyclops_menu, R.drawable.cyclops_icon, SetList.CYCLOPS_SETS)
-        private val SPARKLE = Hero(R.id.sparkleItem, R.drawable.sparkle_menu, R.drawable.stalker_icon, SetList.SPARKLE_SETS)
+        private val SPARKLE = Hero(R.id.sparkleItem, R.drawable.sparkle_menu, R.drawable.sparkle_icon, SetList.SPARKLE_SETS)
         private val HURRICANE = Hero(R.id.hurricaneItem, R.drawable.hurricane_menu, R.drawable.hurricane_icon, SetList.HURRICANE_SETS)
         private val GHOST = Hero(R.id.ghostItem, R.drawable.ghost_menu, R.drawable.ghost_icon, SetList.GHOST_SETS)
         private val FREDDIE = Hero(R.id.freddieItem, R.drawable.freddie_menu, R.drawable.freddie_icon, SetList.FREDDIE_SETS)
