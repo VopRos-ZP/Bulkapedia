@@ -67,7 +67,7 @@ class HeroFragment (private val drawer: DrawerLayout) : Fragment() {
         bind.viewPager.adapter = ViewPagerAdapter(
             activity as AppCompatActivity, fragments)
         TabLayoutMediator(bind.tabLayout, bind.viewPager) { tab, pos ->
-            tab.text = getString(sets[pos].mode.str)
+            tab.text = getString(sets[pos].name)
         }.attach()
     }
 

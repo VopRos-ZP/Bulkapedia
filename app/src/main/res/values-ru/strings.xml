@@ -3,7 +3,7 @@
     <string name="language">ru</string>
     <string name="select_hero">Выберите героя</string>
     <string name="select_map">Выберите карту</string>
-    <string name="ignore_personal_gears">Игнорировать пероснальную снарягу</string>
+    <string name="ignore_personal_gears">Игнорировать персональную снарягу</string>
     <string name="hide_effects">Скрыть эффекты</string>
     <string name="battle_royale_mode">Королевская Битва</string>
     <string name="squad_mode">Стенка</string>
@@ -119,4 +119,15 @@
     <string name="hospital">Госпиталь</string>
     <!--   Стенка -->
     <string name="sewerage">Сточные Воды</string>
+    <!--   названия сетов -->
+    <string name="classical_set">Классика</string>
+    <string name="recommended_set">Рекомендованный</string>
+    <string name="healing_set">Живучесть</string>
+    <string name="damage_set">Урон</string>
+    <string name="squad_set">Стенка</string>
+    <string name="universe_set">Универсальная</string>
+    <string name="protective_set">Защита</string>
+    <string name="fire_range_set">Дальность</string>
+    <string name="spread_set">Мин. Разброс</string>
+    <string name="clip_size_set">Больше патронов</string>
 </resources>

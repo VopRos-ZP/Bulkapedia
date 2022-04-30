@@ -119,4 +119,16 @@
     <string name="hospital">Hospital</string>
     <!--   Стенка -->
     <string name="sewerage">Sewerage</string>
+
+    <!--   названия сетов -->
+    <string name="classical_set">Classic</string>
+    <string name="recommended_set">Recommended</string>
+    <string name="healing_set">Survivability</string>
+    <string name="damage_set">Damage</string>
+    <string name="squad_set">Squad</string>
+    <string name="universe_set">Universal</string>
+    <string name="protective_set">Protection</string>
+    <string name="fire_range_set">Fire range</string>
+    <string name="spread_set">Min Spread</string>
+    <string name="clip_size_set">More bullets</string>
 </resources>
