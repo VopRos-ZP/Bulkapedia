@@ -27,7 +27,7 @@
                 />
 
             <item
-                android:id="@+id/willaMapItem"
+                android:id="@+id/villaMapItem"
                 android:icon="@drawable/villa"
                 android:title="@string/villa"
                 />
@@ -60,6 +60,12 @@
                 android:id="@+id/villageItem"
                 android:icon="@drawable/village"
                 android:title="@string/village"
+                />
+
+            <item
+                android:id="@+id/sawmillItem"
+                android:icon="@drawable/sawmill"
+                android:title="@string/sawmill"
                 />
 
         </menu>

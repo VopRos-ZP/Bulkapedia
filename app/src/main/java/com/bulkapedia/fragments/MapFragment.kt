@@ -43,11 +43,9 @@ class MapFragment (private val drawer: DrawerLayout) : Fragment() {
             // Инициализируем карту
             bind.mapImageView.setImageResource(it.map)
             // Инициализируем нажатие на ShowSpawnPoints
-            bind.showSpawnPoints.setOnCheckedChangeListener { box, b ->
+            bind.showSpawnPoints.setOnCheckedChangeListener { _, b ->
                 val map = if (b) it.mapSpawns else it.map
                 bind.mapImageView.setImageResource(map)
-                val text = if (b) R.string.hide_spawns else R.string.show_spawns
-                box.text = getString(text)
             }
         }
     }
