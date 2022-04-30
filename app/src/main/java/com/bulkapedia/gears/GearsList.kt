@@ -79,7 +79,7 @@ class GearsList {
         val ARM_HEAVY_PORT = Gear(GearSet.HEAVY_PORT, R.drawable.arm_heavy_port, listOf(
             Effect(-25, true, R.string.spread_in_not_focus_effect),
             Effect(-37, true, R.string.time_up_ammo_effect)))
-        val BIO_NODE_ARM = Gear(GearSet.BIO_NODE, 0, listOf(
+        val BIO_NODE_ARM = Gear(GearSet.BIO_NODE, R.drawable.bio_node_arm, listOf(
             Effect(-25, true, R.string.reloading_time_effect),
             Effect(-36, true, R.string.time_up_bust_effect)))
         /** Вещи на ноги **/
@@ -96,13 +96,13 @@ class GearsList {
         val WHITE_INDEX_LEG = Gear(GearSet.WHITE_INDEX, R.drawable.white_index_leg, listOf(
             Effect(10, true, R.string.fire_rate_effect),
             Effect(11, true, R.string.speed_effect)))
-        val LEG_PART = Gear(GearSet.PARTS, 0, listOf(
+        val LEG_PART = Gear(GearSet.PARTS, R.drawable.leg_part, listOf(
             Effect(11, true, R.string.max_health_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val LEG_DARK_IMPLANT = Gear(GearSet.DARK_IMPLANT, R.drawable.dark_boot, listOf(
             Effect(9, false, R.string.piercing_power_effect),
             Effect(-24, true, R.string.spread_in_focus_effect)))
-        val LEG_HEAVY_PORT = Gear(GearSet.HEAVY_PORT, 0, listOf(
+        val LEG_HEAVY_PORT = Gear(GearSet.HEAVY_PORT, R.drawable.leg_heavy_port, listOf(
             Effect(-37, true, R.string.spread_in_focus_effect),
             Effect(-24, true, R.string.spread_in_move_effect)))
         val BIO_NODE_LEG = Gear(GearSet.BIO_NODE, R.drawable.bio_node_leg, listOf(
@@ -121,13 +121,13 @@ class GearsList {
             Effect(10, false, R.string.add_health_effect)))
         val WHITE_INDEX_COLLAR = Gear(GearSet.WHITE_INDEX, R.drawable.white_index_collar, listOf(
             Effect(10, true, R.string.health_damage_effect)))
-        val RING_PART = Gear(GearSet.PARTS, 0, listOf(
+        val RING_PART = Gear(GearSet.PARTS, R.drawable.ring_part, listOf(
             Effect(-25, true, R.string.spread_in_move_effect)))
         val RING_DARK_IMPLANT = Gear(GearSet.DARK_IMPLANT, R.drawable.dark_ring, listOf(
             Effect(-37, true, R.string.time_up_bust_effect)))
-        val COLLAR_HEAVY_PORT = Gear(GearSet.HEAVY_PORT, 0, listOf(
+        val COLLAR_HEAVY_PORT = Gear(GearSet.HEAVY_PORT, R.drawable.ring_heavy_port, listOf(
             Effect(18, true, R.string.speed_in_focus_effect)))
-        val BIO_NODE_RING = Gear(GearSet.BIO_NODE, 0, listOf(
+        val BIO_NODE_RING = Gear(GearSet.BIO_NODE, R.drawable.bio_node_ring, listOf(
             Effect(17, false, R.string.add_armor_effect)))
         /** Вещи на 6 слот **/
         val GAS_GRENADE = Gear(GearSet.NONE, R.drawable.gas_grenade, listOf(
@@ -371,139 +371,139 @@ class GearsList {
             Effect(25, false, R.string.fire_range_focus_effect)))
         val MIRAGE_BOOTS = Gear(GearSet.PERSONAL, R.drawable.mirage_boot, listOf(
             Effect(6, false, R.string.add_patrons_effect),
-            Effect(5, true, R.string.fire_rate_effect)))
+            Effect(12, true, R.string.fire_rate_effect)))
         val MIRAGE_CHOKER = Gear(GearSet.PERSONAL, R.drawable.mirage_choker, listOf(
             Effect(18, false, R.string.add_health_effect),
-            Effect(5, true, R.string.armor_damage_effect)))
+            Effect(10, true, R.string.health_damage_effect)))
         val MIRAGE_ANTIGRAV = Gear(GearSet.PERSONAL, R.drawable.mirage_antigrav, listOf(
-            Effect(62, false, R.string.visibility_effect),
+            Effect(65, false, R.string.visibility_effect),
             Effect(7, true, R.string.max_armor_effect)))
 
         val SMOG_MASK = Gear(GearSet.PERSONAL, R.drawable.smog_mask, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
-            Effect(-37, true, R.string.time_up_ammo_effect)))
+            Effect(65, false, R.string.visibility_effect),
+            Effect(25, false, R.string.add_health_effect)))
         val SMOG_HEART = Gear(GearSet.PERSONAL, R.drawable.smog_heart, listOf(
             Effect(12, true, R.string.max_health_effect),
-            Effect(25, false, R.string.add_health_effect)))
+            Effect(10, false, R.string.piercing_effect)))
         val SMOG_GLOVES = Gear(GearSet.PERSONAL, R.drawable.smog_gloves, listOf(
             Effect(25, false, R.string.fire_range_effect),
             Effect(25, false, R.string.fire_range_focus_effect)))
         val SMOG_BOOTS = Gear(GearSet.PERSONAL, R.drawable.smog_boot, listOf(
-            Effect(-24, true, R.string.spread_in_not_focus_effect),
+            Effect(12, true, R.string.speed_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val SMOG_TAG = Gear(GearSet.PERSONAL, R.drawable.smog_tag, listOf(
-            Effect(-24, true, R.string.spread_in_focus_effect),
+            Effect(-26, true, R.string.spread_in_not_focus_effect),
             Effect(-25, true, R.string.reloading_time_effect)))
         val SMOG_ROCKET = Gear(GearSet.PERSONAL, R.drawable.smog_rocket, listOf(
             Effect(11, true, R.string.armor_damage_effect),
-            Effect(-24, true, R.string.spread_in_move_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect)))
 
         val BASTION_EYE = Gear(GearSet.PERSONAL, R.drawable.bastion_eye, listOf(
-            Effect(-37, true, R.string.time_up_ammo_effect),
+            Effect(65, false, R.string.visibility_effect),
             Effect(-25, true, R.string.reloading_time_effect)))
         val BASTION_HEART = Gear(GearSet.PERSONAL, R.drawable.bastion_heart, listOf(
-            Effect(25, false, R.string.fire_range_effect),
-            Effect(25, false, R.string.fire_range_focus_effect)))
+            Effect(12, true, R.string.max_armor_effect),
+            Effect(9, false, R.string.piercing_effect)))
         val BASTION_GLOVES = Gear(GearSet.PERSONAL, R.drawable.bastion_gloves, listOf(
-            Effect(-24, true, R.string.spread_in_move_effect),
-            Effect(-37, true, R.string.time_up_bust_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect),
+            Effect(10, true, R.string.fire_rate_effect)))
         val BASTION_BOOTS = Gear(GearSet.PERSONAL, R.drawable.bastion_boot, listOf(
             Effect(12, true, R.string.max_health_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val BASTION_RING = Gear(GearSet.PERSONAL, R.drawable.bastion_ring, listOf(
-            Effect(11, true, R.string.armor_damage_effect),
-            Effect(-24, true, R.string.spread_in_focus_effect)))
+            Effect(10, true, R.string.health_damage_effect),
+            Effect(-26, true, R.string.spread_in_focus_effect)))
         val BASTION_SPHERE = Gear(GearSet.PERSONAL, R.drawable.bastion_sphere, listOf(
             Effect(18, false, R.string.add_health_effect),
             Effect(12, true, R.string.speed_effect)))
 
         val DRAGOON_HAT = Gear(GearSet.PERSONAL, R.drawable.dragoon_hat, listOf(
-            Effect(25, false, R.string.fire_range_focus_effect),
-            Effect(62, false, R.string.visibility_effect)))
-        val DRAGOON_HEART = Gear(GearSet.PERSONAL, R.drawable.dragoon_heart, listOf(
             Effect(12, true, R.string.max_armor_effect),
+            Effect(65, false, R.string.visibility_effect)))
+        val DRAGOON_HEART = Gear(GearSet.PERSONAL, R.drawable.dragoon_heart, listOf(
+            Effect(10, false, R.string.piercing_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val DRAGOON_SHOULDER_PAD = Gear(GearSet.PERSONAL, R.drawable.dragoon_shoulder_pad, listOf(
-            Effect(18, false, R.string.add_armor_effect),
+            Effect(5, false, R.string.add_patrons_effect),
             Effect(18, false, R.string.add_health_effect)))
         val DRAGOON_BOOTS = Gear(GearSet.PERSONAL, R.drawable.dragoon_boot, listOf(
-            Effect(-24, true, R.string.spread_in_not_focus_effect),
-            Effect(19, true, R.string.speed_in_focus_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect),
+            Effect(12, true, R.string.speed_effect)))
         val DRAGOON_CHAIN = Gear(GearSet.PERSONAL, R.drawable.dragoon_chain, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
-            Effect(-33, true, R.string.spread_in_focus_effect)))
+            Effect(10, true, R.string.health_damage_effect),
+            Effect(-37, true, R.string.spread_in_focus_effect)))
         val DRAGOON_ROTOR = Gear(GearSet.PERSONAL, R.drawable.dragoon_rotor, listOf(
-            Effect(-24, true, R.string.spread_in_focus_effect),
+            Effect(-25, true, R.string.reloading_time_effect),
             Effect(-37, true, R.string.time_up_ammo_effect)))
 
         val BERTHA_EYE = Gear(GearSet.PERSONAL, R.drawable.bertha_eye, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
+            Effect(25, false, R.string.fire_range_focus_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val BERTHA_BANDOLIER = Gear(GearSet.PERSONAL, R.drawable.bertha_belt, listOf(
-            Effect(-24, true, R.string.spread_in_move_effect),
-            Effect(-37, true, R.string.time_up_bust_effect)))
+            Effect(10, false, R.string.piercing_effect),
+            Effect(12, true, R.string.max_health_effect)))
         val BERTHA_SLEEVE = Gear(GearSet.PERSONAL, R.drawable.bertha_sleeve, listOf(
             Effect(18, false, R.string.add_armor_effect),
-            Effect(62, false, R.string.visibility_effect)))
+            Effect(65, false, R.string.visibility_effect)))
         val BERTHA_BOOTS = Gear(GearSet.PERSONAL, R.drawable.bertha_boot, listOf(
             Effect(-25, true, R.string.reloading_time_effect),
-            Effect(19, true, R.string.speed_in_focus_effect)))
+            Effect(12, true, R.string.speed_effect)))
         val BERTHA_RING = Gear(GearSet.PERSONAL, R.drawable.bertha_ring, listOf(
-            Effect(-24, true, R.string.spread_in_not_focus_effect),
+            Effect(10, true, R.string.health_damage_effect),
             Effect(18, false, R.string.add_health_effect)))
         val BERTHA_FLASHLIGHT = Gear(GearSet.PERSONAL, R.drawable.bertha_scan, listOf(
             Effect(11, true, R.string.armor_damage_effect),
             Effect(-37, true, R.string.time_up_ammo_effect)))
 
         val LEVIATHAN_HAT = Gear(GearSet.PERSONAL, R.drawable.leviathan_cap, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
-            Effect(-24, true, R.string.spread_in_focus_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect),
+            Effect(8, false, R.string.piercing_power_effect)))
         val LEVIATHAN_IMPLANT = Gear(GearSet.PERSONAL, R.drawable.leviathan_implant, listOf(
             Effect(12, true, R.string.max_armor_effect),
-            Effect(18, false, R.string.add_health_effect)))
+            Effect(-37, true, R.string.spread_in_focus_effect)))
         val LEVIATHAN_SHOULDER_PAD = Gear(GearSet.PERSONAL, R.drawable.leviathan_shoulder, listOf(
-            Effect(7, true, R.string.damage_effect),
-            Effect(19, true, R.string.speed_in_focus_effect)))
+            Effect(9, true, R.string.damage_effect),
+            Effect(-25, true, R.string.reloading_time_effect)))
         val LEVIATHAN_BOOTS = Gear(GearSet.PERSONAL, R.drawable.leviathan_boot, listOf(
-            Effect(-25, true, R.string.reloading_time_effect),
+            Effect(12, true, R.string.fire_rate_effect),
             Effect(12, true, R.string.max_health_effect)))
         val LEVIATHAN_RING = Gear(GearSet.PERSONAL, R.drawable.leviathan_ring, listOf(
             Effect(11, true, R.string.health_damage_effect),
             Effect(18, false, R.string.add_armor_effect)))
         val LEVIATHAN_EXPLODER = Gear(GearSet.PERSONAL, R.drawable.leviathan_exploder, listOf(
-            Effect(11, true, R.string.armor_damage_effect),
-            Effect(25, false, R.string.fire_range_focus_effect)))
+            Effect(65, false, R.string.visibility_effect),
+            Effect(9, false, R.string.piercing_effect)))
 
         val STALKER_HAT = Gear(GearSet.PERSONAL, R.drawable.stalker_hat, listOf(
             Effect(25, false, R.string.fire_range_focus_effect),
-            Effect(62, false, R.string.visibility_effect)))
+            Effect(65, false, R.string.visibility_effect)))
         val STALKER_BELT = Gear(GearSet.PERSONAL, R.drawable.stalker_belt, listOf(
-            Effect(-24, true, R.string.spread_in_not_focus_effect),
-            Effect(-37, true, R.string.time_up_bust_effect)))
+            Effect(-26, true, R.string.spread_in_not_focus_effect),
+            Effect(10, false, R.string.piercing_effect)))
         val STALKER_SHOULDER_PAD = Gear(GearSet.PERSONAL, R.drawable.stalker_shoulder_pad, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
+            Effect(12, true, R.string.max_health_effect),
             Effect(18, false, R.string.add_armor_effect)))
         val STALKER_BOOTS = Gear(GearSet.PERSONAL, R.drawable.stalker_boot, listOf(
-            Effect(12, true, R.string.max_armor_effect),
+            Effect(12, true, R.string.fire_rate_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val STALKER_CHAIN = Gear(GearSet.PERSONAL, R.drawable.stalker_chain, listOf(
-            Effect(18, false, R.string.add_health_effect),
+            Effect(10, true, R.string.health_damage_effect),
             Effect(-37, true, R.string.time_up_ammo_effect)))
         val STALKER_RAZOR = Gear(GearSet.PERSONAL, R.drawable.stalker_razor, listOf(
             Effect(6, false, R.string.add_patrons_effect),
-            Effect(-33, true, R.string.spread_in_focus_effect)))
+            Effect(-37, true, R.string.spread_in_focus_effect)))
 
         val DOC_MASK = Gear(GearSet.PERSONAL, R.drawable.doc_mask, listOf(
-            Effect(-24, true, R.string.spread_in_not_focus_effect),
-            Effect(18, false, R.string.add_armor_effect)))
+            Effect(-26, true, R.string.spread_in_not_focus_effect),
+            Effect(65, false, R.string.visibility_effect)))
         val DOC_BELT = Gear(GearSet.PERSONAL, R.drawable.doc_belt, listOf(
             Effect(18, false, R.string.add_health_effect),
-            Effect(-33, true, R.string.spread_in_focus_effect)))
+            Effect(-37, true, R.string.spread_in_focus_effect)))
         val DOC_GLOVES = Gear(GearSet.PERSONAL, R.drawable.doc_gloves, listOf(
             Effect(11, true, R.string.armor_damage_effect),
-            Effect(-37, true, R.string.time_up_ammo_effect)))
+            Effect(25, false, R.string.fire_range_focus_effect)))
         val DOC_BOOTS = Gear(GearSet.PERSONAL, R.drawable.doc_boot, listOf(
-            Effect(-25, true, R.string.reloading_time_effect),
+            Effect(12, true, R.string.speed_effect),
             Effect(-25, true, R.string.running_volume_effect)))
         val DOC_NECKLACE = Gear(GearSet.PERSONAL, R.drawable.doc_necklace, listOf(
             Effect(12, true, R.string.max_health_effect),
@@ -513,39 +513,39 @@ class GearsList {
             Effect(-37, true, R.string.time_up_bust_effect)))
 
         val LEVI_PATCH = Gear(GearSet.PERSONAL, R.drawable.levi_patch, listOf(
-            Effect(-24, true, R.string.spread_in_move_effect),
-            Effect(18, false, R.string.add_health_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect),
+            Effect(25, false, R.string.fire_range_focus_effect)))
         val LEVI_BELT = Gear(GearSet.PERSONAL, R.drawable.levi_belt, listOf(
             Effect(12, true, R.string.max_armor_effect),
-            Effect(19, true, R.string.speed_in_focus_effect)))
+            Effect(10, false, R.string.piercing_power_effect)))
         val LEVI_WHIP = Gear(GearSet.PERSONAL, R.drawable.levi_whip, listOf(
-            Effect(-24, true, R.string.aiming_speed_effect),
-            Effect(-37, true, R.string.time_up_bust_effect)))
+            Effect(-26, true, R.string.aiming_speed_effect),
+            Effect(9, false, R.string.piercing_effect)))
         val LEVI_BOOTS = Gear(GearSet.PERSONAL, R.drawable.levi_boot, listOf(
-            Effect(-24, true, R.string.spread_in_focus_effect),
-            Effect(-37, true, R.string.time_up_ammo_effect)))
+            Effect(-26, true, R.string.spread_in_focus_effect),
+            Effect(12, true, R.string.fire_rate_effect)))
         val LEVI_TAG = Gear(GearSet.PERSONAL, R.drawable.levi_tag, listOf(
             Effect(18, false, R.string.add_armor_effect),
-            Effect(62, false, R.string.visibility_effect)))
+            Effect(65, false, R.string.visibility_effect)))
         val LEVI_RADIO = Gear(GearSet.PERSONAL, R.drawable.levi_radio, listOf(
             Effect(12, true, R.string.max_health_effect),
             Effect(-25, true, R.string.running_volume_effect)))
 
         val SATOSHI_EYE = Gear(GearSet.PERSONAL, R.drawable.satoshi_eye, listOf(
             Effect(12, true, R.string.max_armor_effect),
-            Effect(-37, true, R.string.time_up_ammo_effect)))
+            Effect(-25, true, R.string.reloading_time_effect)))
         val SATOSHI_SHOULDER_PAD = Gear(GearSet.PERSONAL, R.drawable.satoshi_should, listOf(
-            Effect(-25, true, R.string.reloading_time_effect),
+            Effect(9, false, R.string.piercing_effect),
             Effect(19, true, R.string.speed_in_focus_effect)))
         val SATOSHI_HANDS = Gear(GearSet.PERSONAL, R.drawable.satoshi_hands, listOf(
             Effect(12, true, R.string.max_health_effect),
             Effect(-37, true, R.string.time_up_bust_effect)))
         val SATOSHI_LEGS = Gear(GearSet.PERSONAL, R.drawable.satoshi_leg, listOf(
-            Effect(-33, true, R.string.spread_in_focus_effect),
-            Effect(18, false, R.string.add_armor_effect)))
+            Effect(-37, true, R.string.spread_in_focus_effect),
+            Effect(12, true, R.string.speed_effect)))
         val SATOSHI_RING = Gear(GearSet.PERSONAL, R.drawable.satoshi_ring, listOf(
-            Effect(-24, true, R.string.spread_in_move_effect),
-            Effect(62, false, R.string.visibility_effect)))
+            Effect(-26, true, R.string.spread_in_move_effect),
+            Effect(65, false, R.string.visibility_effect)))
         val SATOSHI_ORB = Gear(GearSet.PERSONAL, R.drawable.satoshi_sphere, listOf(
             Effect(11, true, R.string.armor_damage_effect),
             Effect(-25, true, R.string.running_volume_effect)))
