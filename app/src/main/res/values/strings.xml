@@ -103,6 +103,7 @@
     <string name="levi">Levi</string>
     <string name="satoshi">Satoshi</string>
     <!--   названия карт -->
+    <!--   Кб -->
     <string name="hotel">Hotel</string>
     <string name="bank">Bank</string>
     <string name="city">City</string>
@@ -113,5 +114,9 @@
     <string name="casino">Casino</string>
     <string name="road_motel">Road Motel</string>
     <string name="villa">Villa</string>
+    <string name="sawmill">Sawmill</string>
+    <!--   Цг -->
+    <string name="hospital">Hospital</string>
+    <!--   Стенка -->
     <string name="sewerage">Sewerage</string>
 </resources>
