@@ -9,7 +9,7 @@ class MapList {
         private val maps = listOf(
             // Battle Royale Mode
             Map(R.id.hotelMapItem, R.drawable.hotel, R.drawable.hotel_spawns, R.string.hotel),
-            Map(R.id.depotMapItem, R.drawable.depot, R.drawable.depot_spawns, R.string.depot),
+            Map(R.id.railwayStationMapItem, R.drawable.railway_station, R.drawable.railway_station_spawns, R.string.railway_station),
             Map(R.id.casinoMapItem, R.drawable.casino, R.drawable.casino_spawns, R.string.casino),
             Map(R.id.villaMapItem, R.drawable.villa, R.drawable.villa_spawns, R.string.villa),
             Map(R.id.roadMotelMapItem, R.drawable.road_motel, R.drawable.road_motel_spawns, R.string.road_motel),

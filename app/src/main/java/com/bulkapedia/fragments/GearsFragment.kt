@@ -84,7 +84,7 @@ class GearsFragment (private val main: MainActivity)
         val hero = HeroList.getHeroById(item.itemId)
         val heroName = HeroList.getHeroNameById(hero.id)
         // Инициализируем ViewModel
-        model.hero.value = HeroModel(hero, hero.icon, heroName, hero.sets)
+        model.hero.value = HeroModel(hero, hero.bigIcon, heroName, hero.sets)
         // Меняем holder на hero_fragment
         main.supportFragmentManager.beginTransaction().replace(
             bind.holder.holder.id,

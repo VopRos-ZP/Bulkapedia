@@ -15,9 +15,9 @@
                 />
 
             <item
-                android:id="@+id/depotMapItem"
-                android:icon="@drawable/depot"
-                android:title="@string/depot"
+                android:id="@+id/railwayStationMapItem"
+                android:icon="@drawable/railway_station"
+                android:title="@string/railway_station"
                 />
 
             <item
