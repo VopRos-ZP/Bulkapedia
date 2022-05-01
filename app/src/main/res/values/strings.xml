@@ -131,4 +131,186 @@
     <string name="fire_range_set">Fire range</string>
     <string name="spread_set">Min Spread</string>
     <string name="clip_size_set">More bullets</string>
+    <!--   описания сетов -->
+    <string name="description_set">Description:</string>
+    <!--   Арни -->
+    <string name="arnie_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has good damage both in health and armor, as well as increases visibility.\n\n
+        Suitable for modes: BR, Kings Of HIll, SABOTAGE</string>
+    <string name="arnie_survivability_set_desc">A good set if you want to have a lot of health.\n\n
+        It has a lot of health, as well as a good rate of fire and movement speed, also increases visibility.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <string name="arnie_damage_set_desc">A set in which you will kill everyone and everything.\n\n
+        It has a lot of damage, both in armor and in health.\n\n
+        Suitable for all modes</string>
+    <!--   Циклоп -->
+    <string name="cyclops_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has good damage both in health and armor, as well as increases visibility.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <string name="cyclops_recommended_set_desc">A good set if you want to have a lot of health.\n\n
+        It has a lot of health, as well as a good rate of fire and movement speed, also increases visibility.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <!--   Искра -->
+    <string name="sparkle_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has good damage both in health and armor, as well as increases visibility.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <string name="sparkle_recommended_set_desc">A good set if you want to have a lot of health.\n\n
+        It has a lot of health, as well as a good rate of fire and movement speed, also increases visibility.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <!--   Ураган -->
+    <string name="hurricane_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has a good overview and damage.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="hurricane_recommended_set_desc">A popular set.\n\n
+        It has 3 cartridges in the clip, which allows you to kill everyone, as well as greater movement speed, more damage and the radius of grenades.\n\n
+        Suitable for all modes</string>
+    <!--   Призрак -->
+    <string name="ghost_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has excellent movement speed, as well as armor-piercing damage.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="ghost_recommended_set_desc">Recommended set.\n\n
+        The set allows you to imagine the hero as he was before nerf (meta).\n\n
+        Suitable for all modes</string>
+    <!--   Фредди -->
+    <string name="freddie_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has excellent movement speed, visibility, as well as damage.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="freddie_recommended_set_desc">Recommended set.\n\n
+        It has a good overview, survivability, -scatter and damage.\n\n
+        Suitable for all modes</string>
+    <!--   Ангел -->
+    <string name="angel_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has excellent movement speed, damage, as well as more ammo, which is a huge plus for this hero, since he has few ammo.\n\n
+        Also, instead of an echo radar, you can put a gas grenade, depending on your preferences.\n\n
+        Suitable for all modes</string>
+    <string name="angel_protection_set_desc">The optimal set with personal equipment.\n\n
+        It has excellent movement speed, visibility, as well as a durable shield.\n\n
+        Suitable for SQUAD mode</string>
+    <string name="angel_recommended_set_desc">Recommended set.\n\n
+        Has a good overview, more ammo, -scatter and damage.\n\n
+        Suitable for all modes</string>
+    <!--   Ворон -->
+    <string name="raven_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has excellent movement speed, damage and more ammo.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="raven_fire_range_set_desc">Set to range.\n\n
+        It has a good firing range, long clearance and damage.\n\n
+        Suitable for all modes</string>
+    <string name="raven_more_bullets_set_desc">Set for ammo.\n\n
+        It has a lot of cartridges in the clip and good damage.\n\n
+        Suitable for all modes</string>
+    <!--   Блот -->
+    <string name="blot_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a spread, which helps to hit the target more often, as well as more health, good speed and damage.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="blot_min_spread_set_desc">Set on -scatter without personal equipment.\n\n
+        It has a spread, which helps to hit the target more often, as well as more health, good speed and damage.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="blot_universal_set_desc">Universal set.\n\n
+        It has a good firing range, a solid wall, high movement speed, as well as high damage and visibility.\n\n
+        Suitable for all modes</string>
+    <string name="blot_fire_range_set_desc">Set to range.\n\n
+        Has a good shooting range, more health and damage.\n\n
+        Suitable for all modes</string>
+    <string name="blot_damage_set_desc">Set for a lot of damage.\n\n
+        It has a lot of health damage, more visibility, range and less scatter.\n\n
+        Suitable for all modes</string>
+    <!--   Огонек -->
+    <string name="firefly_fire_range_set_desc">Set to range.\n\n
+        It has a long firing range, good damage and -scatter.\n\n
+        Suitable for all modes</string>
+    <string name="firefly_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has -scatter, more health, damage and range.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="firefly_survivability_set_desc">Set for survivability.\n\n
+        Has a large amount of health and huge damage.\n\n
+        If you don\'t like the range, then you can put a personal heart.\n\n
+        Suitable for all modes</string>
+    <!--   Губитель -->
+    <string name="slayer_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a good range, penetration ability, damage and -scatter.\n\n
+        Suitable for modes: BR, KH, SABO</string>
+    <string name="slayer_squad_set_desc">Set for the wall.\n\n
+        It has a huge range, penetration ability and damage.\n\n
+        Suitable for the mode: SQUAD</string>
+    <string name="slayer_min_spread_set_desc">Set on -spread.\n\n
+        It has -spread, optimal speed of movement, range, penetration ability.\n\n
+        If you are at the initial stage and you have a personal leg, then swing it!\n\n
+        Suitable for the mode: BR, KH</string>
+    <!--   Мираж -->
+    <string name="mirage_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has good damage, movement speed and more health.\n\n
+        Suitable for all modes</string>
+    <string name="mirage_recommended_set_desc">The optimal set with personal equipment.\n\n
+        Has good damage, movement speed and more health.\n\n
+        Suitable for all modes</string>
+    <!--   Смог -->
+    <string name="smog_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a good overview, armor piercing, movement speed and damage.\n\n
+        Suitable for all modes</string>
+    <string name="smog_recommended_set_desc">Recommended set.\n\n
+        It has good damage, movement speed and more health, visibility and shooting range, high damage and missile radius.\n\n
+        Suitable for all modes</string>
+    <!--   Драгун -->
+    <string name="dragoon_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has a great overview, movement speed, more health and damage.\n\n
+        Suitable for all modes</string>
+    <string name="dragoon_recommended_set_desc">Recommended set.\n\n
+        It has a great overview, movement speed and damage.\n\n
+        Suitable for all modes</string>
+    <!--   Бастион -->
+    <string name="bastion_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a great speed of movement, great visibility and damage.\n\n
+        Suitable for all modes</string>
+    <string name="bastion_recommended_set_desc">Recommended set.\n\n
+        It has good damage, movement and shooting speed, -scatter and a strong shield.\n\n
+        Suitable for all modes</string>
+    <!--   Берта -->
+    <string name="bertha_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a good overview, movement speed and damage.\n\n
+        Suitable for all modes</string>
+    <string name="bertha_recommended_set_desc">Recommended set.\n\n
+        Has good damage, movement speed, more health and punching ability.\n\n
+        Suitable for all modes</string>
+    <!--   Левиафан -->
+    <string name="leviathan_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a spread, good movement speed and a lot of damage.\n\n
+        Suitable for all modes</string>
+    <string name="leviathan_recommended_set_desc">Recommended set.\n\n
+        It has good damage, also with turrets, more penetration ability and health, both hero and turrets.\n\n
+        Suitable for all modes</string>
+    <!--   Сталкер -->
+    <string name="stalker_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has a lot of damage and movement speed.\n\n
+        Suitable for all modes</string>
+    <string name="stalker_recommended_set_desc">Recommended set.
+        It has a lot of damage and health, movement speed, more ammo and protection from heal.\n\n
+        Suitable for all modes</string>
+    <!--   Док -->
+    <string name="doc_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has a great overview, movement speed, more damage and health.\n\n
+        Suitable for all modes</string>
+    <string name="doc_universal_set_desc">Universal set.\n\n
+        Has a great overview and damage, more movement speed and health.\n\n
+        Suitable for all modes</string>
+    <string name="doc_recommended_set_desc">Recommended set.\n\n
+        It has good damage, movement speed and more health, high damage and missile radius, more protection from heal.\n\n
+        Suitable for all modes</string>
+    <!--   Леви -->
+    <string name="levi_classical_set_desc">The optimal set without personal equipment.\n\n
+        It has a long range of fire and visibility, -scatter and a lot of damage.\n\n
+        Suitable for all modes</string>
+    <string name="levi_recommended_set_desc">Recommended set.\n\n
+        It has a large overview and damage, more protection from heal and shooting speed.\n\n
+        Suitable for all modes</string>
+    <!--   Сатоши -->
+    <string name="satoshi_classical_set_desc">The optimal set without personal equipment.\n\n
+        Has a great overview and damage, more health and movement speed.\n\n
+        Suitable for modes: BR, KH</string>
+    <string name="satoshi_recommended_set_desc">Recommended set.\n\n
+        Has good damage, movement speed and more health.\n\n
+        Suitable for all modes</string>
+    <string name="satoshi_squad_set_desc">Set for the wall.\n\n
+        It has a higher movement speed, more health, a solid wall, reloading speed and a range of visibility and shooting.\n\n
+        Suitable for all modes</string>
 </resources>

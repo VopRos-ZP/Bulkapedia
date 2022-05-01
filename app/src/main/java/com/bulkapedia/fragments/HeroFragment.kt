@@ -11,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import com.bulkapedia.R
 import com.bulkapedia.databinding.HeroFragmentBinding
 import com.bulkapedia.gears.GearSet
+import com.bulkapedia.listeners.TabListener
 import com.bulkapedia.listeners.ViewPagerAdapter
 import com.bulkapedia.models.MainViewModel
 import com.bulkapedia.sets.Set
@@ -66,9 +67,14 @@ class HeroFragment (private val drawer: DrawerLayout) : Fragment() {
         sets.forEach { fragments.add(SetFragment.newInstance(it)) }
         bind.viewPager.adapter = ViewPagerAdapter(
             activity as AppCompatActivity, fragments)
+        bind.tabLayout.addOnTabSelectedListener(TabListener(sets, this::writeDescription))
         TabLayoutMediator(bind.tabLayout, bind.viewPager) { tab, pos ->
             tab.text = getString(sets[pos].name)
         }.attach()
+    }
+
+    private fun writeDescription(desc: Int) {
+        bind.setDescription.text = getString(desc)
     }
 
 }
