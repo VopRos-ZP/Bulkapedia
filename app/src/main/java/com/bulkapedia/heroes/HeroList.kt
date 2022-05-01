@@ -25,7 +25,7 @@ class HeroList {
         private val STALKER = Hero(R.id.stalkerItem, R.drawable.stalker_menu, R.drawable.stalker_icon, SetList.STALKER_SETS)
         private val DOC = Hero(R.id.docItem, R.drawable.doc_menu, R.drawable.doc_icon, SetList.DOC_SETS)
         private val LEVI = Hero(R.id.leviItem, R.drawable.levi_menu, R.drawable.levi_icon, SetList.LEVI_SETS)
-        private val SATOSHI = Hero(R.id.satoshiItem, R.drawable.satoshi_menu, R.drawable.satochi_icon, SetList.SATOSHI_SETS)
+        private val SATOSHI = Hero(R.id.satoshiItem, R.drawable.satoshi_menu, R.drawable.satoshi_icon, SetList.SATOSHI_SETS)
 
         private val SHOTGUNS = listOf(ARNIE, CYCLOPS, SPARKLE, HURRICANE)
         private val SCOUTS = listOf(GHOST, FREDDIE, ANGEL, RAVEN)
