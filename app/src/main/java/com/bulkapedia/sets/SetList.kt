@@ -102,7 +102,7 @@ class SetList {
                 GearCell.ARM to GearsList.ARM_PART,
                 GearCell.LEG to GearsList.RUNNERS_BOOT,
                 GearCell.DECOR to GearsList.THUG_KNUCKLE,
-                GearCell.DEVICE to GearsList.GAS_GRENADE),
+                GearCell.DEVICE to GearsList.ECHO_RADAR),
                 R.string.ghost_classical_set_desc
             ),
             Set(R.string.recommended_set, mapOf(
