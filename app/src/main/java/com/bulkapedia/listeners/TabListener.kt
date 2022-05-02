@@ -9,8 +9,11 @@ class TabListener (
 ) : TabLayout.OnTabSelectedListener {
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
-        val description = it[tab?.position!!].description
-        writeDescription(description)
+        val pos = tab?.position!!
+        if (pos < it.size) {
+            val description = it[pos].description
+            writeDescription(description)
+        }
     }
 
     override fun onTabUnselected(tab: TabLayout.Tab?) {
