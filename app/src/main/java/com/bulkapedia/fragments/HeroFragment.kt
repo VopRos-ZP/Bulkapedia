@@ -75,6 +75,8 @@ class HeroFragment (private val drawer: DrawerLayout) : Fragment() {
 
     private fun writeDescription(desc: Int) {
         bind.setDescription.text = getString(desc)
+        bind.setDescription.invalidate()
+        bind.setDescription.requestLayout()
     }
 
 }
